@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas Tailor - Penjahit Custom & Bespoke Premium</title>
+    <style>
+        :root {
+            --navy-dark: #0A192F;
+            --navy-light: #172A45;
+            --gold: #D4AF37;
+            --gold-hover: #AA820A;
+            --gold-light: #FFF8E7;
+            --off-white: #F8F9FA;
+            --white: #FFFFFF;
+            --charcoal: #1E293B;
+            --muted: #64748B;
+            --border: #E2E8F0;
+            --shadow-sm: 0 2px 8px rgba(10, 25, 47, 0.06);
+            --shadow-md: 0 8px 24px rgba(10, 25, 47, 0.08);
+            --shadow-lg: 0 16px 32px rgba(10, 25, 47, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--off-white);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gold-light);
+            color: var(--gold-hover);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--navy-dark);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            font-size: 1.125rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.95rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37, #F3E081);
+            color: var(--navy-dark);
+            box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #C29F2B, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.45);
+        }
+
+        .btn-navy {
+            background: var(--navy-dark);
+            color: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-navy:hover {
+            background: var(--navy-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--navy-dark);
+            border: 2px solid var(--navy-dark);
+        }
+
+        .btn-outline:hover {
+            background: var(--navy-dark);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 85px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--navy-dark);
+            letter-spacing: -0.03em;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--navy-dark);
+            color: var(--gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.3rem;
+            border: 1px solid var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: var(--charcoal);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-hover);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background-color: var(--navy-dark);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 6rem;
+            background: linear-gradient(180deg, #F1F5F9 0%, var(--off-white) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            font-weight: 900;
+            color: var(--navy-dark);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold-hover);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--muted);
+            margin-bottom: 2.25rem;
+            max-width: 580px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .hero-guarantee {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            max-width: 500px;
+        }
+
+        .hero-guarantee-icon {
+            font-size: 1.8rem;
+        }
+
+        .hero-guarantee text {
+            font-size: 0.9rem;
+            color: var(--charcoal);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-card-img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--white);
+        }
+
+        .hero-floating-badge {
+            position: absolute;
+            bottom: 30px;
+            left: -25px;
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 1.25rem 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 280px;
+            border: 1px solid var(--gold);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gold-light);
+            color: var(--gold-hover);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: var(--navy-dark);
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+        }
+
+        .feature-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .services {
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.25rem;
+        }
+
+        .service-card {
+            background: var(--off-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-img {
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-body {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .service-body h3 {
+            font-size: 1.35rem;
+            color: var(--navy-dark);
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+        }
+
+        .service-body p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .service-price {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--gold-hover);
+        }
+
+        .portfolio-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            color: var(--charcoal);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--navy-dark);
+            color: var(--gold);
+            border-color: var(--navy-dark);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 320px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10, 25, 47, 0.1) 0%, rgba(10, 25, 47, 0.9) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            color: var(--white);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h4 {
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.875rem;
+            color: #CBD5E1;
+        }
+
+        .estimator-section {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 4rem 3rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .estimator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .estimator-info h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.25rem;
+            font-weight: 800;
+        }
+
+        .estimator-info p {
+            color: #94A3B8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .estimator-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: #E2E8F0;
+            font-size: 1rem;
+        }
+
+        .estimator-form {
+            background: var(--white);
+            color: var(--charcoal);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: var(--navy-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1.1rem;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: var(--white);
+            color: var(--charcoal);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--gold);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+
+        .price-output-box {
+            background: var(--gold-light);
+            border: 2px dashed var(--gold);
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .price-output-box p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .price-amount {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: var(--navy-dark);
+        }
+
+        .testimonials {
+            background: var(--white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--off-white);
+            padding: 2.25rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: #F59E0B;
+            margin-bottom: 1.25rem;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--charcoal);
+            font-size: 1rem;
+            margin-bottom: 1.75rem;
+            line-height: 1.7;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+        }
+
+        .client-details h4 {
+            font-size: 1rem;
+            color: var(--navy-dark);
+            font-weight: 800;
+        }
+
+        .client-details p {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .faq-container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.35rem 1.75rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            gap: 1rem;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            color: var(--gold-hover);
+            font-weight: 300;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+            padding: 0 1.75rem;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.active {
+            border-color: var(--gold);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.75rem 1.5rem 1.75rem;
+            transition: max-height 0.35s cubic-bezier(1, 0, 1, 0);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .footer {
+            background: var(--navy-dark);
+            color: #94A3B8;
+            padding-top: 5rem;
+            padding-bottom: 2.5rem;
+            font-size: 0.95rem;
+            border-top: 3px solid var(--gold);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1.1fr 1.3fr;
+            gap: 3.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand p {
+            margin-bottom: 1.75rem;
+            line-height: 1.7;
+            color: #94A3B8;
+        }
+
+        .footer-heading {
+            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.85rem;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+            color: #94A3B8;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748B;
+        }
+
+        @media (max-width: 992px) {
+            .hero-grid, .estimator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.75rem;
+            }
+
+            .hero-card-img {
+                height: 420px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2.5rem;
+                gap: 1.75rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .estimator-section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .estimator-form {
+                padding: 1.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">A</div>
+                Anas Tailor
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#keunggulan">Keunggulan</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#estimasi">Kalkulator Biaya</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://wa.me/6281211821805?text=Halo%20Anas%20Tailor,%20saya%20ingin%20konsultasi%20jahit" class="btn btn-gold" style="padding: 0.6rem 1.25rem;">Konsultasi WhatsApp</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">✨ Penjahit Bespoke & Custom Spesialis</div>
+                    <h1>Pakaian Pas Sempurna, <span>Meningkatkan Kepercayaan Diri</span> Anda.</h1>
+                    <p>Hentikan membuang uang untuk pakaian siap pakai yang kurang pas di badan. Anas Tailor menghadirkan potongan presisi, kain premium, dan garansi fitting 100% pas di tubuh Anda.</p>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/6281211821805?text=Halo%20Anas%20Tailor,%20saya%20mau%20konsultasi%20jahitan%20custom" class="btn btn-gold">
+                            💬 Konsultasi via WhatsApp
+                        </a>
+                        <a href="#estimasi" class="btn btn-outline">
+                            🧮 Hitung Estimasi Biaya
+                        </a>
+                    </div>
+                    <div class="hero-guarantee">
+                        <div class="hero-guarantee-icon">🛡️</div>
+                        <div>
+                            <strong>Garansi Fitting 100% Pas</strong>
+                            <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">Gratis perbaikan sampai duduk sempurna di postura tubuh Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" alt="Penjahit Mengukur Jas Premium" class="hero-card-img" onerror="this.src='https://placehold.co/600x520/0A192F/D4AF37?text=Anas+Tailor+Craftsmanship'">
+                    <div class="hero-floating-badge">
+                        <div style="font-size: 2rem; color: var(--gold);">✂️</div>
+                        <div>
+                            <strong style="display:block; font-size: 0.95rem;">Standar Boutique Premium</strong>
+                            <span style="font-size: 0.8rem; color: #94A3B8;">15+ Tahun Pengalaman Jahit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="keunggulan">
+        <div class="container">
+            <div class="section-title">
+                <div class="badge">Mengapa Memilih Kami</div>
+                <h2>Standar Kualitas Tanpa Kompromi</h2>
+                <p>Kami memadukan ketelitian seni jahit tradisional dengan kepraktisan kebutuhan busana modern Anda.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✂️</div>
+                    <h3>Jahitan Presisi Tinggi</h3>
+                    <p>Dikerjakan oleh penjahit senior berpengalaman belasan tahun dengan pola ukur tubuh mendalam.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧵</div>
+                    <h3>Bahan Kain Berkualitas</h3>
+                    <p>Akses ke koleksi bahan pilihan wool, katun premium, batik sutra, dan kain eksklusif tahan lama.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Tepat Waktu</h3>
+                    <p>Jadwal pengerjaan yang terstruktur dan pasti. Siap kapan pun momen spesial Anda tiba.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Garansi Fitting 100%</h3>
+                    <p>Jaminan perbaikan gratis tanpa batasan hingga busana benar-benar nyaman dan pas di tubuh.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding services" id="layanan">
+        <div class="container">
+            <div class="section-title">
+                <div class="badge">Layanan Jahit Eksklusif</div>
+                <h2>Solusi Busana Untuk Setiap Momen</h2>
+                <p>Pilih kategori layanan jahit custom yang Anda butuhkan dengan jaminan mutu tinggi.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=600&q=80" alt="Jas & Tuxedo" class="service-img" onerror="this.src='https://placehold.co/600x400/0A192F/D4AF37?text=Jas+%26+Tuxedo'">
+                    <div class="service-body">
+                        <h3>Jas & Tuxedo</h3>
+                        <p>Pembuatan jas pengantin, wisuda, dan bisnis dengan struktur bahu gagah dan kenyamanan maksimal.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Mulai Rp 750.000</span>
+                            <a href="#estimasi" class="btn btn-navy" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Hitung Biaya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80" alt="Batik Premium" class="service-img" onerror="this.src='https://placehold.co/600x400/0A192F/D4AF37?text=Batik+Premium'">
+                    <div class="service-body">
+                        <h3>Batik Premium Custom</h3>
+                        <p>Pemotongan kain batik dengan teknik *pattern matching* presisi tinggi dan kelapisan furing halus.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Mulai Rp 250.000</span>
+                            <a href="#estimasi" class="btn btn-navy" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Hitung Biaya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=600&q=80" alt="Seragam Kantor" class="service-img" onerror="this.src='https://placehold.co/600x400/0A192F/D4AF37?text=Seragam+Kantor'">
+                    <div class="service-body">
+                        <h3>Seragam Kantor & Keluarga</h3>
+                        <p>Pemesanan massal seragam korporat atau keluarga untuk acara spesial dengan kerapian konsisten.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Harga Khusus Jumlah Banyak</span>
+                            <a href="#estimasi" class="btn btn-navy" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Hitung Biaya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Permak Premium" class="service-img" onerror="this.src='https://placehold.co/600x400/0A192F/D4AF37?text=Permak+Premium'">
+                    <div class="service-body">
+                        <h3>Alteration / Permak Premium</h3>
+                        <p>Restorasi dan penyesuaian ulang ukuran pakaian favorit Anda tanpa merusak potongan asli.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Mulai Rp 75.000</span>
+                            <a href="#estimasi" class="btn btn-navy" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Hitung Biaya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" alt="Gaun Kebaya" class="service-img" onerror="this.src='https://placehold.co/600x400/0A192F/D4AF37?text=Gaun+%26+Kebaya'">
+                    <div class="service-body">
+                        <h3>Gaun & Kebaya Modern</h3>
+                        <p>Rancangan gaun pesta dan kebaya kustom dengan detail payet anggun serta siluet feminine.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Mulai Rp 450.000</span>
+                            <a href="#estimasi" class="btn btn-navy" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Hitung Biaya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="portofolio">
+        <div class="container">
+            <div class="section-title">
+                <div class="badge">Portofolio & Bukti Kualitas</div>
+                <h2>Hasil Karya Terbaik Kami</h2>
+                <p>Lihat secara langsung detail dan kerapian karya yang telah dipercayakan kepada Anas Tailor.</p>
+            </div>
+            
+            <div class="portfolio-tabs">
+                <button class="tab-btn active" data-filter="all">Semua Hasil</button>
+                <button class="tab-btn" data-filter="jas">Jas & Tuxedo</button>
+                <button class="tab-btn" data-filter="batik">Batik Custom</button>
+                <button class="tab-btn" data-filter="gaun">Gaun & Kebaya</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="jas">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=500&q=80" alt="Jas Wedding Bespoke" onerror="this.src='https://placehold.co/500x320/0A192F/D4AF37?text=Jas+Wedding'">
+                    <div class="portfolio-overlay">
+                        <h4>Jas Wedding Bespoke</h4>
+                        <p>Bahan Italian Wool Blend 120s</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="batik">
+                    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=500&q=80" alt="Kemeja Batik Tulis" onerror="this.src='https://placehold.co/500x320/0A192F/D4AF37?text=Batik+Tulis'">
+                    <div class="portfolio-overlay">
+                        <h4>Batik Tulis Motif Mega Mendung</h4>
+                        <p>Full Furing Tricot halus</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="gaun">
+                    <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=500&q=80" alt="Kebaya Modern Pesta" onerror="this.src='https://placehold.co/500x320/0A192F/D4AF37?text=Kebaya+Modern'">
+                    <div class="portfolio-overlay">
+                        <h4>Kebaya Modern Payet Custom</h4>
+                        <p>Sutra Silk Brocade Premium</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="jas">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=80" alt="Blazer Executive" onerror="this.src='https://placehold.co/500x320/0A192F/D4AF37?text=Executive+Blazer'">
+                    <div class="portfolio-overlay">
+                        <h4>Executive Double-Breasted Blazer</h4>
+                        <p>Navy Wool Structure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="estimasi">
+        <div class="estimator-section">
+            <div class="estimator-grid">
+                <div class="estimator-info">
+                    <div class="badge" style="background: rgba(212, 175, 55, 0.2); color: var(--gold);">Kalkulator Interaktif</div>
+                    <h2>Hitung Estimasi Biaya Jahit Anda</h2>
+                    <p>Hitung gambaran biaya penjahitan secara rinci, transparan, dan dapatkan penawaran instan via WhatsApp.</p>
+                    <ul class="estimator-bullets">
+                        <li><span>✔</span> Bebas biaya konsultasi desain awal</li>
+                        <li><span>✔</span> Tercover Garansi Pas Sempurna 100%</li>
+                        <li><span>✔</span> Pilihan pengerjaan cepat / express</li>
+                    </ul>
+                </div>
+                <div class="estimator-form">
+                    <div class="form-group">
+                        <label for="item-type">Jenis Pakaian</label>
+                        <select id="item-type" class="form-control">
+                            <option value="150000" data-name="Kemeja Custom">Kemeja Custom (Rp 150.000)</option>
+                            <option value="200000" data-name="Celana Formal">Celana Formal (Rp 200.000)</option>
+                            <option value="250000" data-name="Batik Full Furing">Batik Full Furing (Rp 250.000)</option>
+                            <option value="750000" data-name="Jas / Tuxedo">Jas / Tuxedo (Rp 750.000)</option>
+                            <option value="450000" data-name="Gaun / Kebaya">Gaun / Kebaya (Rp 450.000)</option>
+                            <option value="75000" data-name="Permak / Alteration">Permak / Alteration (Rp 75.000)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="material-type">Penyediaan Bahan / Kain</label>
+                        <select id="material-type" class="form-control">
+                            <option value="0" data-name="Bawa Bahan Sendiri">Bawa Bahan Sendiri (+Rp 0)</option>
+                            <option value="100000" data-name="Kain Katun Premium">Kain Katun Premium (+Rp 100.000)</option>
+                            <option value="250000" data-name="Kain Wool Blend">Kain Wool Blend (+Rp 250.000)</option>
+                            <option value="500000" data-name="Kain Italian Wool / Silk">Kain Italian Wool / Silk (+Rp 500.000)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="complexity-type">Tingkat Kerumitan & Layanan</label>
+                        <select id="complexity-type" class="form-control">
+                            <option value="1" data-name="Standar (7-10 Hari)">Pengerjaan Standar (7-10 Hari)</option>
+                            <option value="1.3" data-name="Express (3-4 Hari)">Express 3-4 Hari (+30%)</option>
+                            <option value="1.6" data-name="Super Express (1-2 Hari)">Super Express 1-2 Hari (+60%)</option>
+                        </select>
+                    </div>
+                    <div class="price-output-box">
+                        <p>ESTIMASI TOTAL BIAYA:</p>
+                        <div class="price-amount" id="price-display">Rp 150.000</div>
+                    </div>
+                    <button id="send-wa-btn" class="btn btn-gold" style="width: 100%;">
+                        💬 Pesan via WhatsApp Sekarang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding testimonials">
+        <div class="container">
+            <div class="section-title">
+                <div class="badge">Ulasan Pelanggan</div>
+                <h2>Kepercayaan Dari Ribuan Klien</h2>
+                <p>Dengarkan pengalaman kepuasan mereka yang mempercayakan busananya kepada Anas Tailor.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Sangat puas bikin jas pernikahan di Anas Tailor. Pas pertama kali fitting langsung pas di badan tanpa revisi. Potongannya bikin proporsi tubuh kelihatan lebih gagah!"</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Budi Santoso" class="client-avatar" onerror="this.src='https://placehold.co/100x100/0A192F/D4AF37?text=BS'">
+                        <div class="client-details">
+                            <h4>Budi Santoso</h4>
+                            <p>Pengantin & Eksekutif Muda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Tingkat ketelitian memotong batik luar biasa presisi. Sambungan motif di bagian kancing tidak meleset sama sekali. Jahitan paling rapi yang pernah saya coba."</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Dodi Wijaya" class="client-avatar" onerror="this.src='https://placehold.co/100x100/0A192F/D4AF37?text=DW'">
+                        <div class="client-details">
+                            <h4>Dodi Wijaya</h4>
+                            <p>Kolektor Batik & Pengusaha</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Layanan home measurement-nya sangat membantu buat yang sibuk. Penjahitnya ramah dan paham betul bentuk badan. Hasil gaun istri saya juga mendapat banyak pujian!"</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Rina & Suami" class="client-avatar" onerror="this.src='https://placehold.co/100x100/0A192F/D4AF37?text=RS'">
+                        <div class="client-details">
+                            <h4>Rina & Suami</h4>
+                            <p>Pelanggan Setia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <div class="badge">FAQ</div>
+                <h2>Pertanyaan Yang Sering Diajukan</h2>
+                <p>Jawaban lengkap atas pertanyaan seputar pemesanan dan layanan di Anas Tailor.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Berapa lama proses pengerjaan penjahitan?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pengerjaan standar memakan waktu 7 hingga 10 hari kerja. Tersedia juga pilihan layanan Express (3-4 hari) dan Super Express (1-2 hari) sesuai kebutuhan mendesak Anda.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bagaimana jika hasil jahitan tidak pas saat dites?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Kami menyediakan Garansi Fitting 100%. Apabila terdapat bagian yang kurang nyaman atau belum pas, kami siap melakukan perbaikan secara gratis hingga pakaian duduk sempurna.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah bisa membawa bahan kain sendiri?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tentu bisa. Anda dapat membawa kain sendiri dan kami akan membebankan ongkos jahit sesuai tingkat kerumitan. Namun kami juga menyediakan beragam kain pilihan kelas atas.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah ada layanan pengukuran langsung di tempat klien?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ya, tim penjahit kami menyediakan layanan *Home Measurement* untuk area perkotaan. Kami dapat mengunjungi kediaman atau kantor Anda dengan membawa sampel bahan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">A</div>
+                        Anas Tailor
+                    </a>
+                    <p>Penyedia layanan busana bespoke dan custom premium. Menyajikan potongan presisi, bahan terbaik, dan garansi fitting 100% pas di tubuh Anda.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Navigasi Cepat</h4>
+                    <ul class="footer-links">
+                        <li><a href="#keunggulan">Keunggulan</a></li>
+                        <li><a href="#layanan">Layanan</a></li>
+                        <li><a href="#portofolio">Portofolio</a></li>
+                        <li><a href="#estimasi">Kalkulator Biaya</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Jam Layanan</h4>
+                    <ul class="footer-links" style="color: #94A3B8;">
+                        <li>Senin - Jumat: 08:00 - 20:00</li>
+                        <li>Sabtu: 08:00 - 17:00</li>
+                        <li>Minggu: Dengan Perjanjian</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Kontak & Alamat</h4>
+                    <ul class="footer-links">
+                        <li>📍 Jl. Mawar Premium No. 88, Jakarta</li>
+                        <li>📞 +62 812-1182-1805</li>
+                        <li>✉️ info@anastailor.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anas Tailor. All rights reserved. Premium Bespoke Tailoring.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // --- 1. Navigation Menu Mobile Toggle ---
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                });
+
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+
+            // --- 2. Portfolio Category Filter ---
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // --- 3. Interactive Price Calculator & WA Generator ---
+            const itemTypeSelect = document.getElementById('item-type');
+            const materialTypeSelect = document.getElementById('material-type');
+            const complexityTypeSelect = document.getElementById('complexity-type');
+            const priceDisplay = document.getElementById('price-display');
+            const sendWaBtn = document.getElementById('send-wa-btn');
+
+            function calculatePrice() {
+                const itemBase = parseFloat(itemTypeSelect.value) || 0;
+                const materialBase = parseFloat(materialTypeSelect.value) || 0;
+                const speedMultiplier = parseFloat(complexityTypeSelect.value) || 1;
+
+                const total = (itemBase + materialBase) * speedMultiplier;
+
+                const formatted = new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    maximumFractionDigits: 0
+                }).format(total);
+
+                priceDisplay.textContent = formatted;
+                return { total, formatted };
+            }
+
+            [itemTypeSelect, materialTypeSelect, complexityTypeSelect].forEach(element => {
+                if (element) {
+                    element.addEventListener('change', calculatePrice);
+                }
+            });
+
+            calculatePrice();
+
+            if (sendWaBtn) {
+                sendWaBtn.addEventListener('click', function () {
+                    const { formatted } = calculatePrice();
+                    
+                    const itemText = itemTypeSelect.options[itemTypeSelect.selectedIndex].getAttribute('data-name');
+                    const materialText = materialTypeSelect.options[materialTypeSelect.selectedIndex].getAttribute('data-name');
+                    const complexityText = complexityTypeSelect.options[complexityTypeSelect.selectedIndex].getAttribute('data-name');
+
+                    const phoneNumber = "6281234567890";
+                    
+                    const message = `Halo Anas Tailor, saya berminat memesan jahit custom via Website:%0A%0A` +
+                        `• *Jenis Pakaian:* ${itemText}%0A` +
+                        `• *Pilihan Kain:* ${materialText}%0A` +
+                        `• *Layanan:* ${complexityText}%0A` +
+                        `• *Estimasi Total:* ${formatted}%0A%0A` +
+                        `Mohon informasi ketersediaan slot fitting dan prosedur ukur. Terima kasih!`;
+
+                    const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+                    window.open(waUrl, '_blank');
+                });
+            }
+
+            // --- 4. Interactive Accordion FAQ ---
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const faqItem = this.parentElement;
+                    const isOpen = faqItem.classList.contains('active');
+
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    if (!isOpen) {
+                        faqItem.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
